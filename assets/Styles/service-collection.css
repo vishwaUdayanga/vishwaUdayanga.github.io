@@ -1,0 +1,134 @@
+.service-collection{
+    width: 100%;
+    height: 80vh;
+    background-color: #100028;
+    overflow: hidden;
+    display: flex;
+}
+
+.service-collection .left-container{
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.service-collection .left-container .service-image-left-bar{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-collection .left-container .service-image-left-bar:nth-child(1){
+    background-image: url('../Images/MERN.jpg');
+}
+
+.service-collection .left-container .service-image-left-bar:nth-child(2){
+    background-image: url('../Images/UI.jpg');
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.service-collection .left-container .service-image-left-bar:nth-child(3){
+    background-image: url('../Images/React-Native.jpg');
+    margin-top: 10px;
+}
+
+.service-collection .left-container .service-image-left-bar:nth-child(4){
+    background-image: url('../Images/HTML-CSS.jpg');
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.service-collection .right-container{
+    width: 40%;
+    height: 100%;
+    background-image: url('../Images/Visual-Concepts.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-description{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: #8f0f4bb7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.2s 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.service-description h1{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.service-description a{
+    width: fit-content;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(160, 161, 162);
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.service-description button:focus{
+    border: none;
+}
+
+.service-collection .left-container .service-image-left-bar:hover .service-description{
+    transform: translateY(0);
+}
+
+.service-collection .right-container:hover .service-description{
+    transform: translateY(0);
+}
+
+@media(max-width: 681px){
+    .service-collection{
+        height: fit-content;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .service-collection .left-container{
+        height: 60vh;
+        width: 100%;
+    }
+    .service-collection .right-container{
+        width: 100%;
+        height: 50vh;
+    }
+    .service-collection .left-container .service-image-left-bar:nth-child(2),
+    .service-collection .left-container .service-image-left-bar:nth-child(4){
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 340px){
+    .service-collection .left-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: fit-content;
+    }
+    .service-collection .left-container .service-image-left-bar{
+        width: 100%;
+        height: 40vh;
+        margin: 0;
+    }
+    .service-collection .left-container .service-image-left-bar:nth-child(2),
+    .service-collection .left-container .service-image-left-bar:nth-child(4),
+    .service-collection .left-container .service-image-left-bar:nth-child(3){
+        margin: 0;
+    }
+}

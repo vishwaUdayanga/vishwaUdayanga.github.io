@@ -1,0 +1,216 @@
+footer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: #0a0119;
+    overflow: hidden;
+}
+
+.footer-content{
+    width: 1200px;
+}
+
+.footer-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #2a2a2b;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content-right{
+    display: flex;
+    gap: 10px;
+}
+
+.content-right span{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #231b30;
+    color: aliceblue;
+}
+
+.content-right a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.main-links{
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    border-bottom: 1px solid #2a2a2b;
+}
+
+.main-links h2{
+    color: aliceblue;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.main-links p{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.main-links .main-left{
+    width: 70%;
+    display: flex;
+}
+
+.main-links .main-left .about-me{
+    width: 40%;
+}
+
+.main-links .main-left .about-me button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.main-links .main-left .about-me a{
+    text-decoration: none;
+}
+
+.main-links .main-left .about-me button:focus{
+    outline: none;
+    border: none;
+}
+
+.main-links .main-left .about-me button span{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.main-links .main-left .about-me button i{
+    color: #5c5c5c;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.main-links .main-left .who-am-i , .main-links .main-left .my-work{
+    width: 30%;
+}
+
+.main-left ul{
+    margin-top: 20px;
+}
+
+.main-left ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.main-left ul li a{
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(160, 161, 162);
+    font-size: 14px;
+}
+
+.main-links .main-right{
+    width: 30%;
+}
+
+.main-right .email-input-box{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #2a2a2b;
+    margin-top: 20px;
+    display: flex;
+}
+
+.main-right .email-input-box input{
+    width: 88%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(160, 161, 162);
+}
+
+.main-right .email-input-box a{
+    text-decoration: none;
+    width: 12%;
+}
+
+.main-right .email-input-box span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00bfe7;
+    cursor: pointer;
+}
+
+.main-right .email-input-box span i{
+    color: aliceblue;
+}
+
+.main-right .email-input-box input:focus{
+    border: none;
+    outline: none;
+}
+
+.copy-rights{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width: 1236px){
+    .footer-content{
+        width: 900px;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width: 906px){
+    .main-links{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .main-links .main-left{
+        width: 100%;
+    }
+    .main-links .main-right{
+        width: 100%;
+    }
+    .main-links .main-left .who-am-i , .main-links .main-left .my-work{
+        width: 20%;
+    }
+    .main-links .main-left .about-me{ 
+        width: 60%;
+        padding-right: 40px;
+    }
+}
+
+@media(max-width: 571px){
+    .main-links .main-left{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .main-links .main-left .who-am-i , .main-links .main-left .my-work, .main-links .main-left .about-me{
+        width: 100%;
+    }
+}

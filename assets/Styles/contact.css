@@ -1,0 +1,147 @@
+.contact{
+    width: 100%;
+    height: fit-content;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../Images/common-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.contact-content{
+    width: 1200px;
+}
+
+.personal-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-details .details{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-details .details .icon{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #949494;
+}
+
+.personal-details .details .icon i{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.personal-details .details h2{
+    color: white;
+    letter-spacing: 1px;
+}
+
+.contact-bottom-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 80px;
+}
+
+.contact-bottom-container iframe{
+    width: 50%;
+    height: 59vh;
+}
+
+.get-in-touch{
+    width: 50%;
+    padding-left: 25px;
+}
+
+.get-in-touch h1{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.get-in-touch form{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get-in-touch form input{
+    background-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(160, 161, 162);
+    line-height: 22px;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #616164;
+    transition: all 0.5s ease;
+}
+
+.get-in-touch form input:focus{
+    outline: none;
+    border: 1px solid white;
+}
+
+.get-in-touch form textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(160, 161, 162);
+    line-height: 22px;
+    font-size: 14px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #616164;
+    transition: all 0.5s ease;
+}
+
+.get-in-touch form textarea:focus{
+    outline: none;
+    border: 1px solid white;
+}
+
+.get-in-touch form button{
+    padding: 12px 0px;
+    background-color: rgb(0, 187, 255);
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+@media(max-width: 843px){
+    .personal-details{
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 20px;
+    }
+    .contact-bottom-container{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .contact-bottom-container iframe{
+        width: 100%;
+    }
+    .get-in-touch{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+

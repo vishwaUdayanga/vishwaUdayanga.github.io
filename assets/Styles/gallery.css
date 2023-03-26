@@ -1,0 +1,206 @@
+.gallery{
+    width: 100%;
+    height: 90vh;
+    background-image: url('../Images/main-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.gallery .content{
+    width: 85%;
+    height: 75vh;
+    position: relative;
+}
+
+.gallery .content input{
+    display: none;
+}
+
+.slide-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slide-container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(8, 8, 75, 0.207);
+}
+
+.slide-container.active{
+    transform: scale(0.8);
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slide-container.active .slide-image{
+    filter: grayscale(100%);
+}
+
+.button-container{
+    position: absolute;
+    right: -60px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.button-container button{
+    transform: rotate(90deg);
+    color: white;
+    background-color: transparent;
+    position: relative;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.button-container button::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    top: 50%;
+    left: 0;
+    background-color: #c70660;
+    transition: all 0.1s ease-in-out;
+}
+
+.button-container button:hover::after{
+    width: 100%;
+}
+
+.slide-image{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0%);
+    transition: height 1s 1.4s cubic-bezier(0.19, 1, 0.22, 1), filter 0.4s 0.1s ease;
+    transition: all 2s ease-in-out;
+}
+
+.slide-image1{
+    background-image: url('../Images/gallery-img1.jpg');
+    background-position: 0%;
+}
+
+.slide-image2{
+    background-image: url('../Images/gallery-img2.jpg');
+    background-position: 50%;
+}
+
+.slide-image3{
+    background-image: url('../Images/gallery-img3.jpg');
+    background-position: 0%;
+}
+
+.slide-active{
+    height: 100%;
+    opacity: 1;
+    z-index: 10;
+    transition: height .5s .3s cubic-bezier(.77,0,.175,1), filter 0.4s 0.1s ease;
+}
+
+.gallery .content .topic-container{
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    left: -40px;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.gallery h1{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transform:translate3d(0,140%,0);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.8s ease;
+    letter-spacing: 1px;
+}
+
+#for-text1:checked ~ .topic-container .topic1{
+    transform:translate3d(0,0%,0);
+    opacity: 1;
+    transition: transform 0.6s cubic-bezier(.77,0,.175,1), opacity 0.1s ease;
+}
+
+#for-text2:checked ~ .topic-container .topic2{
+    transform:translate3d(0,0%,0);
+    opacity: 1;
+    transition: transform 0.6s cubic-bezier(.77,0,.175,1), opacity 0.1s ease;
+}
+
+#for-text3:checked ~ .topic-container .topic3{
+    transform:translate3d(0,0%,0);
+    opacity: 1;
+    transition: transform 0.6s cubic-bezier(.77,0,.175,1), opacity 0.1s ease;
+}
+
+@media(max-width: 1052px){
+    .gallery .content .topic-container{
+        height: 50vh;
+        top: 20%;
+    }
+}
+
+@media(max-width: 956px){
+    .gallery .content{
+        width: 90%;
+    }
+    .gallery .content .topic-container{
+        left: 0;
+    }
+    .gallery h1{
+        font-size: 3rem;
+        top: 10%;
+    }
+    .button-container{
+        right: 0;
+        z-index: 10;
+    }
+    .button-container{
+        top: 85%;
+        right: 50%;
+        gap: 50px;
+        flex-wrap: wrap;
+        transform: rotate(-90deg);
+    }
+    .button-container button::after{
+        top: 40%;
+    }
+    .button-container button{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 658px){
+    .button-container{
+        right: 45%;
+    }
+}

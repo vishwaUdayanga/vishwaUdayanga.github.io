@@ -1,0 +1,138 @@
+.services{
+    width: 100%;
+    height: fit-content;
+    padding: 60px 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../Images/common-background.jpg');
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.service-content{
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.service-content-left{
+    width: 35%;
+}
+
+.service-content-left h1{
+    color: white;
+    font-size: 2rem;
+    width: fit-content;
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.service-content-left h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 5px;
+    background-color: rgb(0, 187, 255);
+}
+
+.small-size{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(160, 161, 162);
+    line-height: 22px;
+    font-size: 14px
+}
+
+.margin-top{
+    margin-top: 20px;
+}
+
+.normal-size{
+    color: white;
+}
+
+.service-content-right{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+.service-card{
+    width: 50%;
+    cursor: pointer;
+}
+
+.service-card:nth-child(3), .service-card:nth-child(4) {
+    margin-top: 20px;
+}
+
+.service-card:hover i::after{
+    transform: rotate(45deg);
+}
+
+.service-card i{
+    color: white;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.service-card i::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(0, 187, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+.service-card h2{
+    color: white;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.service-card p{
+    margin-top: 20px;
+}
+
+@media(max-width: 999px){
+    .service-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-content-left{
+        width: 100%;
+    }
+    .service-content-right{
+        width: 100%;
+    }
+    .service-card:nth-child(2), .service-card:nth-child(4){
+        padding-left: 10px;
+    }
+}
+
+@media(max-width: 532px){
+    .service-content-right{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-card{
+        width: 100%;
+    }
+    .service-card:nth-child(2), .service-card:nth-child(4), .service-card:nth-child(3){
+        margin: 0;
+        padding: 0;
+    }
+}
