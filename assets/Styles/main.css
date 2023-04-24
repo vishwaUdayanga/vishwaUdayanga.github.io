@@ -13,7 +13,7 @@
     height: 95vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../Images/main-background.jpg');
+    background-image: url('../Images/main-background.webp');
     overflow: hidden;
     display: flex;
     flex-direction: column;

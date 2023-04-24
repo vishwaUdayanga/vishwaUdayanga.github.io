@@ -21,22 +21,22 @@
 }
 
 .service-collection .left-container .service-image-left-bar:nth-child(1){
-    background-image: url('../Images/MERN.jpg');
+    background-image: url('../Images/MERN.webp');
 }
 
 .service-collection .left-container .service-image-left-bar:nth-child(2){
-    background-image: url('../Images/UI.jpg');
+    background-image: url('../Images/UI.webp');
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .service-collection .left-container .service-image-left-bar:nth-child(3){
-    background-image: url('../Images/React-Native.jpg');
+    background-image: url('../Images/React-Native.webp');
     margin-top: 10px;
 }
 
 .service-collection .left-container .service-image-left-bar:nth-child(4){
-    background-image: url('../Images/HTML-CSS.jpg');
+    background-image: url('../Images/HTML-CSS.webp');
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -45,7 +45,7 @@
 .service-collection .right-container{
     width: 40%;
     height: 100%;
-    background-image: url('../Images/Visual-Concepts.jpg');
+    background-image: url('../Images/Visual-Concepts.webp');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
